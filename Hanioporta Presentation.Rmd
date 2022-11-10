@@ -1,0 +1,26 @@
+---
+title: "Hanioporta Presentation"
+author: "MariusPasch"
+date: "2022-11-10"
+output: html_document
+---
+
+## The Date is: `r Sys.Date()`
+
+## Overview
+
+In this assignment, I created a web page showing th location of the famous landmark of my neighborhood called "Hanioporta" or " Pantokrator Bastion". The webpage contains the date I created the document and the map created with Leaflet.
+
+```{r, echo = TRUE, cashe = TRUE, warning=FALSE, message=FALSE}
+
+library(leaflet)
+library(dplyr)
+
+hanioporta <- leaflet() %>%
+        addTiles() %>%
+        addMarkers(lat=35.336996,lng=25.124863,popup='Pantokrator Bastion "Hanioporta"')
+hanioporta
+
+```
+
+## Please feel free to navigate Heraklion
